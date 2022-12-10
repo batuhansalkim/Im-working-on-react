@@ -24,7 +24,7 @@ export default class App extends Component {
         />
 
         <User
-          name="Tunahan Salkım"
+          name="Necla Salkım"
           department="sales"
           salary="7000"
           age="30"
