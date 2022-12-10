@@ -7,18 +7,27 @@ export default class App extends Component {
     return (
       <div className='container'>
         <h4>Buraya Bazi Bölümler Eklenecek</h4>
-        <Navbar title = "User App"/>
+        <Navbar />
         <hr />
         <User
-          name="Batuhan Salkım"
-          department="technology"
+          name="Batuhan Salkim"
+          department="Bilişim"
           salary = "5000"
+          age = "30"
         />
 
         <User
           name="Tunahan Salkım"
           department="sales"
           salary="7000"
+          age="30"
+        />
+
+        <User
+          name="Tunahan Salkım"
+          department="sales"
+          salary="7000"
+          age="30"
         />
       </div>
     )
