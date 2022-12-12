@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { isVisible } from '@testing-library/user-event/dist/utils'
 
 
 class User extends Component {
@@ -13,6 +14,16 @@ class User extends Component {
     department: "Bilgi Alinamadi",
     salary: "Bilgi Alinamadi",
   }
+  
+  onClickEvent=(e)=>{
+
+    this.setState({
+      isVisible:!this.state.isVisible
+    })
+  }
+
+
+
   // constructor(props){
   //   super(props);
 
@@ -31,7 +42,9 @@ class User extends Component {
       <div className='col-md-8 mb-4'> 
         <div className="card">
           <div className="card-header d-flex justify-content-between">
-            <h4 className='d-inline'>{name}</h4>
+
+            <h4 className='d-inline' onClick={this.onClickEvent}>{name}</h4>
+
             <i className='far fa-trash-alt' style={{cursor:"pointer"}}></i>
           </div>
           {
