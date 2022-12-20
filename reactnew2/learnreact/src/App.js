@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 // class Welcome extends React.Component{
@@ -16,18 +15,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        
         <p>
-          batuhan salkım deneme website.
+          batuhan salkım React first website. 
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        
       </header>
     </div>
   );
