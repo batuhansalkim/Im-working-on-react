@@ -5,7 +5,7 @@ import Profile from './components/Profile';
 function App() {
   return (
     <div className="App">
-      <Profile name="BATU" lastname="salkim"/>
+      <Profile isim="BATU" soyisim="Deneme"/>
 
       
     </div>
