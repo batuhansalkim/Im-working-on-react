@@ -1,6 +1,8 @@
 function Profile(props){
-    console.log(props);
-    return <h1>Name - Surname - Age : {props.isim} - {props.soyisim} -  {props.age}</h1>
+   const {name, lastname} = props;
+    return <h1>
+        Name : {name} {lastname}
+    </h1>
     
 }
 
