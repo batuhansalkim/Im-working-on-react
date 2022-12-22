@@ -6,8 +6,10 @@ class Counter extends Component{
         this.state= {
             counter: 0,
         }
+        this.arttir = this.arttir.bind(this);
     }
     arttir(){
+        console.log(this);
         this.setState({
             counter: this.state.counter + 5,
         })
@@ -20,9 +22,8 @@ class Counter extends Component{
     render(){
         return (<div>
             <h3>Count value is : {this.state.counter}</h3>
-            <button  onClick={()=>this.arttir()}>Arttır Buton</button>
-            <br />
-            <button onClick={()=>this.azalt()}>Azalt Buton</button>
+            <button onClick={this.arttir}>Arttır Buton</button>
+            
         </div>) 
         
     }
