@@ -1,9 +1,12 @@
 import './App.css';
-import Resume from  "./components/Resume"
+import ClassEvent from './components/ClassEvent';
 function App() {
   return (
     <div className="App">
-      <Resume name = "Bilecik"></Resume>
+
+      <ClassEvent>
+
+      </ClassEvent>
 
      
 
