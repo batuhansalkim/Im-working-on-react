@@ -1,13 +1,10 @@
 import './App.css';
-import FunctionalCounter from './components/FunctionalCounter';
+import Counter from './components/Counter';
 function App() {
   return (
     <div className="App">
 
-      <FunctionalCounter></FunctionalCounter>
-
-
-     
+      <Counter></Counter>
 
       
     </div>
