@@ -1,61 +1,40 @@
 import { Component } from "react";
 
-
 class Counter extends Component{
-    // constructor(){
-    //     super();
-    //     this.state={
-    //         counter:0,
-    //     }
-    //     this.arttir=this.arttir.bind(this);
-    // }
-
     constructor(){
         super();
         this.state={
-            counter :0,
+            sayi:0,
         }
-        this.arttir =this.arttir.bind(this);
+        this.arttir=this.arttir.bind(this);
         this.azalt = this.azalt.bind(this);
     }
-
     arttir(){
         this.setState({
-            counter :this.state.counter+5,
+            sayi:this.state.sayi+1,
+        })
+    }
+    azalt(){
+        this.setState({
+            sayi:this.state.sayi-1,
         })
     }
     
-    azalt(){
-        this.setState({
-            counter:this.state.counter-5,
-        })
-    }
 
     render(){
         return(
             <div>
-                <h3>Count value is : {this.state.counter}</h3>
-                <button onClick={this.arttir}>Arttır</button><br />
-                <button onClick={this.azalt}>Azalt</button>
+                <h3>Sayinin Degeri : {this.state.sayi}</h3>
+                <button onClick={this.arttir}>+</button><br /><br />
+                <button onClick={this.azalt}>-</button>
             </div>
         )
     }
-    // arttir(){
-    //     this.setState({
-    //         counter : this.state.counter +5,
-    //     })
-    // }
-    
-    // render(){
-    //     return (<div>
-    //         <h3>Count value is : {this.state.counter}</h3>
-    //         <button onClick={this.arttir}>Arttır Buton</button>
-    //     </div>) 
-        
-    // }
 }
-
 export default Counter;
+
+
+
 
 
 
