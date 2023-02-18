@@ -1,6 +1,11 @@
-function Button(){
+import classNames from "classnames"
+
+function Button({text, variant = 'default' }){
     return(
-        <button>bu b</button>
+        <button className={classNames({
+           " p-4 h-10 flex items-center rounded":true,
+           "bg-gray-100": variant === 'default'
+        })}>{text}</button>
     )
 }
 
