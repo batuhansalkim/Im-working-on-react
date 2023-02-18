@@ -1,21 +1,16 @@
 import './App.css';
-import './cssklasör/styles.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Title } from './Components';
-import Thebootstrap from './boot/Thebootstrap';
-
+import './scss/FileName.scss';
+import './tailwind.css';
+import Button from './components/Button';
 
 function App() {
+ 
   return (
-    <div className="App">
-      <h3>{process.env.NODE_ENV}</h3>
-      <Title>Batuhan</Title>
-      <Title theme="dark">Batuhan</Title>
-      <Thebootstrap />
-      <p className='env'>
-        <span>test</span>
-      </p>
-    </div>
+    <>
+      <Button>
+
+      </Button>
+    </>
   );
 }
 
