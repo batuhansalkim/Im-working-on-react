@@ -21,7 +21,7 @@ class UserListComponent extends Component {
     return (
       <div className='container'>
         <button className='btn btn-primary' onClick={()=> this.setState({visible:true})} >Add</button>
-        <FormComponent visible={this.state.visible} hide={this.hide}/>
+        <FormComponent visible={this.state.visible} hide={this.hide} addUser= {this.props.addUser}/>
             {this.props.users.length > 0  ?(
                 <Table>
                     <thead>
@@ -43,7 +43,7 @@ class UserListComponent extends Component {
                                 <td>
                                     <button className='btn btn-warning'>Edit</button>
                                     &nbsp;
-                                    <button className='btn btn-danger'>Delete</button>
+                                    <button className='btn btn-danger' onClick={()=>this.props.deleteUser(user)}>Delete</button>
                                 </td>
                             </tr>
                         ))}

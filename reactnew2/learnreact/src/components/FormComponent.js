@@ -11,6 +11,14 @@ export default class FormComponent extends Component {
             email: ""
         }
     }
+    onSubmit(){
+        this.props.addUser(
+            this.state.name,
+            this.state.surname,
+            this.state.email,
+        );
+        this.props.hide();
+    }
   render() {
     return (
         <Modal fade={false} isOpen={this.props.visible}>
@@ -34,7 +42,7 @@ export default class FormComponent extends Component {
                 </Form>
         </ModalBody>
         <ModalFooter>
-            <button className='btn btn-success'>Add</button>
+                <button className='btn btn-success' onClick={() => this.onSubmit()}>Add</button>
             <button className='btn btn-danger' onClick={()=> this.props.hide()}>Cancel</button>
         </ModalFooter>
       </Modal >
