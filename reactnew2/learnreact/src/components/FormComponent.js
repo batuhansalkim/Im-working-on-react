@@ -5,6 +5,7 @@ export default class FormComponent extends Component {
     constructor(props){
         super(props);
     }
+    
   render() {
     return (
           <Modal fade={false} isOpen={this.props.visible}>
@@ -13,7 +14,8 @@ export default class FormComponent extends Component {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, omnis.
         </ModalBody>
         <ModalFooter>
-            <button> </button>
+            <button className='btn btn-success'>Add</button>
+            <button className='btn btn-danger' onClick={()=> this.props.hide()}>Cancel</button>
         </ModalFooter>
       </Modal >
     )

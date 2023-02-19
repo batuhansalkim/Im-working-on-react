@@ -10,13 +10,17 @@ class UserListComponent extends Component {
         super(props);
         this.state={
             visible: false,
-        }
+        };
+        this.hide= this.hide.bind(this);
+    }
+    hide(){
+        this.setState({visible:false});
     }
   render() {
     return (
       <div className='container'>
         <button className='btn btn-primary' onClick={()=> this.setState({visible : true})}>Add</button>
-        <FormComponent visible={this.state.visible}/>
+        <FormComponent visible={this.state.visible} hide={this.hide}/>
             {this.props.users.length > 0  ?(
                 <Table>
                     <thead>
