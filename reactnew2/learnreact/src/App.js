@@ -1,12 +1,11 @@
 import React from "react";
-import Counter from "./components/Counter";
-
+import HomePage from "./pages/HomePage";
 
 
 function App(){
   return(
     <div>
-      <Counter/>
+      <HomePage/>
     </div>
   )
 }
