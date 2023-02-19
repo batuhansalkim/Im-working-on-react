@@ -43,7 +43,7 @@ class HomePage extends Component{
                         <NavbarBrand href="/">react-intro</NavbarBrand>
                     </div>                  
                 </Navbar>
-                <UserListComponent kisiler={this.props.users}/>
+                <UserListComponent users={this.state.users}/>
             </div>
         )
     }
