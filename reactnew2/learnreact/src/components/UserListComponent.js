@@ -8,12 +8,15 @@ class UserListComponent extends Component {
     // eslint-disable-next-line no-useless-constructor
     constructor(props){
         super(props);
+        this.state={
+            visible: false,
+        }
     }
   render() {
     return (
       <div className='container'>
-        <button className='btn btn-primary'>Add</button>
-        <FormComponent/>
+        <button className='btn btn-primary' onClick={()=> this.setState({visible : true})}>Add</button>
+        <FormComponent visible={this.state.visible}/>
             {this.props.users.length > 0  ?(
                 <Table>
                     <thead>
