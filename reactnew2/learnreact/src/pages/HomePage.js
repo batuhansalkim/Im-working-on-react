@@ -39,6 +39,7 @@ class HomePage extends Component{
         };
         this.addUser = this.addUser.bind(this);
         this.deleteUser =this.deleteUser.bind(this);
+        this.editUser = this.editUser.bind(this);
     }
 
     addUser=(name,surname,email)=>{
@@ -65,6 +66,25 @@ class HomePage extends Component{
         })
         this.setState({users});
         toast(`"${obj.name}" kullanıcısı Silindi...`)
+    }
+    editUser=(id,name,surname,email)=>{
+        if((id,name,surname,email)){
+            const users = [...this.state.users];
+            let updatedUsers = users.map((user)=>{
+                if(user.id ===id){
+                    user = {
+                        id:id,
+                        name:name,
+                        surname:surname,
+                        email:email,
+                    };
+                }
+                return user;
+            });
+            this.setState({
+                users:updatedUsers,
+            })
+        }
     }
 
     render(){
