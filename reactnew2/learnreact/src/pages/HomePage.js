@@ -67,6 +67,7 @@ class HomePage extends Component{
         this.setState({users});
         toast(`"${obj.name}" kullanıcısı Silindi...`)
     }
+    
     editUser=(id,name,surname,email)=>{
         if((id,name,surname,email)){
             const users = [...this.state.users];
@@ -97,7 +98,12 @@ class HomePage extends Component{
                         <NavbarBrand href="/">react-intro</NavbarBrand>
                     </div>                  
                 </Navbar>
-                <UserListComponent users={this.state.users} addUser= {this.addUser} deleteUser={this.deleteUser}/>
+                <UserListComponent 
+                users={this.state.users} 
+                addUser= {this.addUser} 
+                deleteUser={this.deleteUser}
+                editUser = {this.editUser}
+                />
             </div>
         )
     }

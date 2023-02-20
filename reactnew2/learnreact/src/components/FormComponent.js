@@ -20,6 +20,10 @@ export default class FormComponent extends Component {
         );
         this.props.hide();
     }
+    onUpdate(){
+        this.props.editUser(this.state.id,this.state.name,this.state.surname,this.state.email);
+        this.props.hide();
+    }
     componentDidMount(){
         this.setState({
             id:this.props.user.id,
@@ -52,7 +56,7 @@ export default class FormComponent extends Component {
         </ModalBody>
         <ModalFooter>
             {
-                    this.props.user.id ? <button className='btn btn-success' onCl>Update</button> : <button className='btn btn-success' onClick={() => this.onSubmit()}>Add</button>
+                    this.props.user.id ? <button className='btn btn-success' onClick={()=>this.onUpdate()}>Update</button> : <button className='btn btn-success' onClick={() => this.onSubmit()}>Add</button>
             }
                 
             <button className='btn btn-danger' onClick={()=> this.props.hide()}>Cancel</button>

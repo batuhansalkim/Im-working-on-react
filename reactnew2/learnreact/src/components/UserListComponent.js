@@ -34,6 +34,7 @@ class UserListComponent extends Component {
                     visible={this.state.visible} 
                     hide={this.hide} 
                     addUser={this.props.addUser} 
+                    editUser={this.props.editUser}
                     user={this.state.user} 
                     title ={this.state.title}
                     />):null
