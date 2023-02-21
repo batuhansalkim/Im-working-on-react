@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: cornflowerblue;
+    display: grid;
+    place-items: center;
+    margin-top: 100px;
+    color: #fff;
+}
+
+.todoField{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.todoField .todoField__btn{
+    color: #fff;
+    background-color: black;
+    border: 0;
+    height: 35px;
+}
+.todoField .todoField__input{
+    height: 35px;
+    padding: 0 13px;
+    border: 0;
+    outline: 0;
+}
+
+h1{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
