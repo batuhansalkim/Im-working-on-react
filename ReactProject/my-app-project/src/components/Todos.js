@@ -10,6 +10,20 @@ export default function Todos(){
                     <a href="#">❌</a>
                 </div>
             </li>
+            <li className="todos__item">
+                <span className="todos__text">GYM</span>
+                <div className="todos__buttons">
+                    <a href="#">✅</a>
+                    <a href="#">❌</a>
+                </div>
+            </li>
+            <li className="todos__item">
+                <span className="todos__text">GYM</span>
+                <div className="todos__buttons">
+                    <a href="#">✅</a>
+                    <a href="#">❌</a>
+                </div>
+            </li>
         </ul>
     )
 }
