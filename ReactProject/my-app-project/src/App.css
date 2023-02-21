@@ -30,8 +30,13 @@ h1{
     text-align: center;
 }
 
-
-
+.todos{
+    list-style-type: none;
+}
+.todos__item{
+    display: flex;
+    width: 100%;
+}
 
 
 
