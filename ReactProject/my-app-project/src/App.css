@@ -43,11 +43,16 @@ h1{
     text-transform: uppercase;
     font-size: 14px;
 }
-.todos .todos__buttons a{
+.todos .todos__buttons button{
     margin-left: 10px;
     text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
 }
-
+.todos .todos__text.todos__text--done{
+    text-decoration: line-through;
+}
 
 
 
