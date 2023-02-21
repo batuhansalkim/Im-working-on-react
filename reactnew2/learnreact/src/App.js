@@ -1,11 +1,11 @@
 import React from "react";
-import HomePage from "./pages/HomePage";
+import Deneme from "./components/Deneme";
 
 
 function App(){
   return(
     <div>
-      <HomePage/>
+     <Deneme/>
     </div>
   )
 }

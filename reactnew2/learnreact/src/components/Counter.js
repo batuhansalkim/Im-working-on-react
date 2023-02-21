@@ -1,35 +1,20 @@
-import React, {Component} from "react";
+import React, { useState,useEffect } from "react";
 
-class Counter extends Component{
+export default function Counter(){
 
-    constructor(props){
-        super(props);
-        this.state ={
-            count: 0,
-        }
-        
-    }
-    increase(){
-        this.setState({
-            count : this.state.count+ 1 ,
-        })
-    }
-    decrease(){
-        this.setState({
-            count: this.state.count-1  ,
-        })
-    }
+    const [count,setCount] = useState(0);
 
-    render(){
-        return(
-            <>
-            <p>Sayı : {this.state.count}</p>
-            <button onClick={()=> this.increase()}>Arttır</button><br />
-            <button onClick={ this.decrease()}>Azalt</button>
-            </>
-        )
-    }
+    useEffect(()=>{
+        //component update
+        document.title =`Buton ${count} times clicked` 
+    })
+
+    return(
+        <div>
+            <p>Button {count} times clicked.</p>
+            <button onClick={()=>setCount(count + 1)}>Arttır</button>
+            <button onClick={()=>setCount(count-1)}>Azalat</button>
+        </div>
+    )
 }
 
-
-export default Counter;
