@@ -21,14 +21,27 @@ function App(){
 
 const addTodo = (todo)=>{
   if(todo.name){
-    setTodos(...todos, todo);
+    setTodos([...todos, todo]);
   }
 }
-  return(
+const deleteTodo=(id)=>{
+  let newTodos = todos.filter((obje)=>obje.id !== id);
+  setTodos(newTodos);
+}
+
+
+const doneTodo = (id)=>{
+  let currentTodo = todos.find((istedigimseyolurburasi)=>istedigimseyolurburasi.id === id);
+  currentTodo.status=true;
+  setTodos([...todos]);
+}
+
+
+return(
     <div className='app'>
       <h1>Yapılacaklar App</h1>
       <TodoField addTodo = {addTodo}/>
-      <Todos todos={todos}/>
+      <Todos doneTodo={doneTodo} deleteTodo={deleteTodo} todos={todos}/>
     </div>
   )
 }
