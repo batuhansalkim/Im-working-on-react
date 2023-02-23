@@ -34,6 +34,15 @@ h1{
 .todos{
     text-decoration: none;
     list-style-type:none ;
+    max-height: 400px;
+    overflow-y: auto;
+}
+.todos::-webkit-scrollbar{
+    width: 10px;
+    background-color:rgb(255, 255, 255);
+}
+.todos::-webkit-scrollbar-thumb{
+    background-color: #000000;
 }
 .todos__item{
     display: flex;
