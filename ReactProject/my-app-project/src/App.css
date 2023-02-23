@@ -10,6 +10,7 @@ body{
 .todoField{
     display: flex;
     align-items: center;
+    margin: auto;
     margin-top: 20px;
 }
 .todoField .todoField__btn{
@@ -17,42 +18,48 @@ body{
     background-color: black;
     border: 0;
     height: 35px;
+    width:60px;
     cursor: pointer;
 }
 .todoField .todoField__input{
     height: 35px;
-    padding: 0 13px;
+    padding: 0 30px;
     border: 0;
     outline: 0;
 }
 h1{
     text-align: center;
+    margin: auto;
 }
 .todos{
-    list-style-type: none;
-    margin-top: 20px;
+    text-decoration: none;
+    list-style-type:none ;
 }
-.todos .todos__item{
-    margin-top: 10px;
+.todos__item{
     display: flex;
-    width: 100%;
-    align-items: center;
     justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
 }
-.todos .todos__text{
-    text-transform: uppercase;
-    font-size: 14px;
+.todos__text{
+    font-size: 18px;
 }
 .todos .todos__buttons button{
-    margin-left: 10px;
     text-decoration: none;
     cursor: pointer;
+    margin-left: 10px;
     background-color: transparent;
     border: 0;
 }
 .todos .todos__text.todos__text--done{
     text-decoration: line-through;
 }
+
+
+
+
 
 
 

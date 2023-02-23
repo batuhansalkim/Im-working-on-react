@@ -1,14 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
+import {v4 as uuidv4} from "uuid";
 
-export default function TodoField(){
+const TodoField = ({addTodo}) =>{
+    
+    const [value,setValue]  = useState('')
+
+
     return(
         <div className="todoField">
-            <input 
-            type="text" 
-            className="todoField__input"
-            placeholder="Yapılacak görev yazınız..."
-            />
-            <button className="todoField__btn">Add</button>
+            <input value={value}
+            onChange={(e)=>setValue(e.target.value)} 
+            className="todoField__input" type="text" />
+            <button onClick={()=> addTodo({
+                id:uuidv4(),
+                name:value,
+                status:false
+            })} className="todoField__btn">Ekle</button>
         </div>
     )
 }
+
+export default TodoField;
