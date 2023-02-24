@@ -5,12 +5,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100vh;
-  display: grid;
-  place-items: center;
+  padding: 20px 50px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.todo-wrapper{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.todo-wrapper .todo{
+  padding: 10px ;
+  margin: 10px ;
+  border: 1px solid #ddd;
+  max-width: 120px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
