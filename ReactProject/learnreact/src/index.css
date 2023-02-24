@@ -18,13 +18,15 @@ code {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  
 }
 .todo-wrapper .todo{
   padding: 10px ;
   margin: 10px ;
   border: 1px solid #ddd;
-  max-width: 120px;
+  max-width: 250px;
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
 }
