@@ -20,10 +20,14 @@ function App(){
   return(
     <>
     <div className="todo-wrapper">
-      <div className="todo">
-        <div className="todo-title">asdsa</div>
-        <input type="checkbox" checked className="todo-completed" />
-      </div>
+      {
+        todos.length>0 && todos.map((todo)=>(
+          <div key={todo.id} className="todo">
+            <h3 className="todo-title">{todo.title}</h3>
+            <input type="checkbox" checked ={todo.completed}className="todo-completed" />
+          </div>
+        ))
+      }
     </div>
     </>
   )

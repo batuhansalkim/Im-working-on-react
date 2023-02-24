@@ -21,12 +21,12 @@ code {
   
 }
 .todo-wrapper .todo{
-  padding: 10px ;
+  padding: 20px ;
   margin: 10px ;
   border: 1px solid #ddd;
   max-width: 250px;
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   align-items: flex-start;
   justify-content: space-between;
 }
