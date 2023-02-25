@@ -1,25 +1,13 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 
 function App(){
 
-  const [todos,setTodos] = useState([]);
-
-  useEffect(()=>{
-  const fetchTodos = async ()=>{
-    try{
-      const response = await axios.get("https://jsonplaceholder.typicode.com/todos/");
-      setTodos(response.data);
-    }catch(err){
-      console.log(err);
-    }
-  }
-  fetchTodos();
-  },[])
+  
+  
 
   return(
     <>
-    <div className="todo-wrapper">
+    {/* {<div className="todo-wrapper">
       {
         todos.length>0 && todos.map((todo)=>(
           <div key={todo.id} className="todo">
@@ -28,7 +16,7 @@ function App(){
           </div>
         ))
       }
-    </div>
+    </div> } */}
     </>
   )
 }
