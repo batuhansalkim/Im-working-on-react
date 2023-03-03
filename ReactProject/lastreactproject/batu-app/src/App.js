@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <div>
-      <h1>batuhan</h1>
+      <h1>deneme batu</h1>
     </div>
   );
 }
