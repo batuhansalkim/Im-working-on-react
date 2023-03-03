@@ -3,20 +3,19 @@ import React, {useState,useEffect} from "react";
 
 function App() {
 
-  const [count,setCount]  = useState(10);
-  
+  const [status,setStatus]  = useState("false");
+
   useEffect(()=>{
-    document.title = `you clicked ${count} times `;
-  });
-
-
+    setStatus("deneme2")
+  },50000)
 
   return(
     <div>
-      <p>you clicked {count} times</p>
-      <button onClick={()=>setCount(count+1)}>click me</button>      
+      {status}
     </div>
   )
+ 
+ 
 }
 
 export default App;
