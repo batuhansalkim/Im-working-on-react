@@ -1,29 +1,23 @@
 import './App.css';
-import React, {useState,useRef} from "react";
+import React, {useRef} from "react";
+import { BrowserRouter,Routes,Route,Link } from 'react-router-dom';
+import Home from './pages/Home';
+import Detail from './pages/Detail';
 
 function App() {
 
-  const [count,setCount]  = useState(0);  
-  const firstRef = useRef(0);
-
-  const func = (num)=>{
-
-  }
-
-  console.log("firstRef",firstRef.current.value = 7);
-
-  const refFunc = ()=>{
-   // firstRef.current
-  }
   return(
-    <div>
-      <div>{status}</div>
-      <input onClick={refFunc} ref={firstRef} placeholder='ara' />
-    </div>
+    <>
+      <BrowserRouter>
+      <Routes>
+
+        <Route path='/' element={<Home/>}/>
+        <Route path='detail/' element={<Detail/>}/>
+
+      </Routes>
+      </BrowserRouter>
+    </>
   )
- 
- 
 }
 
 export default App;
-//1:14 de kaldım
