@@ -1,14 +1,29 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import arr from "../data";
+import { useParams } from "react-router-dom";
 
 const Detail = ()=>{
+    const {id} = useParams()
+    const [data, setData] = useState([])
+
+    useEffect(()=>{
+        setData(arr);
+    },[id]);
+
+    console.log("data",data);
+
     const redirecFunc = ()=>{
         window.location = "/"
     }
     return(
-        <div>
+        <>
             <button onClick={redirecFunc}>Anasayfa</button>
-        </div>
+            {
+                data.filter(dt=> dt.id == id).map((dat)=>(
+                    <div key={dat.id}>{dat.name}</div>
+                ))
+            }
+        </>
     )
 }
 

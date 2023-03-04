@@ -14,7 +14,7 @@ const Home = ()=>{
         <div>
             {
                 arr.map(ar=>(
-                    <div onClick={()=>redirecFunc(ar.id)} style={{margin:"10px", cursor:"pointer",border:"1px solid black", padding:"5px"}} key={ar.id}>
+                    <div onClick={()=>redirecFunc(ar.id)}  style={{margin:"10px", cursor:"pointer",border:"1px solid black", padding:"5px"}} key={ar.id}>
                         {ar.name}
                     </div>
                 ))
