@@ -2,9 +2,12 @@ import React from "react";
 
 
 const Detail = ()=>{
+    const redirecFunc = ()=>{
+        window.location = "/"
+    }
     return(
         <div>
-            Detail
+            <button onClick={redirecFunc}>Anasayfa</button>
         </div>
     )
 }
