@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-
+import { useState } from "react";
 
 function App() {
   const planets = [
@@ -12,8 +12,15 @@ function App() {
     { name: "Uranus", isGasPlanet: true },
 
   ]
+  const [age,setAge] = useState(0)
+  const increaseAge = ()=>{
+    
+  }
   return (
-    <div className='App'>batu</div>
+    <div className='App'>
+      {age}
+      <button onClick={increaseAge}>Increase Age</button>
+    </div>
   )
 }
 
