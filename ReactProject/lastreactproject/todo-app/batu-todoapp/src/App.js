@@ -1,11 +1,13 @@
 import './App.css';
 import {useState} from "react";
+import Text from './Text';
+
 
 function App() {
-  const [showText, setShowText] = useState(false);
+  const [showText, setShowText] = useState(true);
   return (
     <div className='App'>
-      <button onClick={()=>{}}>
+      <button onClick={()=>{setShowText(!showText)}}>
         Show Text
       </button>
       {showText && <Text/>}
