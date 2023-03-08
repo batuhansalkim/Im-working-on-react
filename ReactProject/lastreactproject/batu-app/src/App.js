@@ -13,11 +13,7 @@ function App() {
 
   ]
   return (
-    <div className='App'>
-      {planets.map(
-        (planet,key)=> !planet.isGasPlanet && <h1 key={key}>{planet.name}</h1>
-      )}
-    </div>
+    <div className='App'>batu</div>
   )
 }
 
