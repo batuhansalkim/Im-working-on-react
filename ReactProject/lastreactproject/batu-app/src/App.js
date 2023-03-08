@@ -12,14 +12,38 @@ function App() {
     { name: "Uranus", isGasPlanet: true },
 
   ]
-  const [age,setAge] = useState(0)
-  const increaseAge = ()=>{
-    
+  const [yas,degistirYas] = useState(0)
+  const yasArttır = ()=>{
+    degistirYas(yas +1 )
+  }
+  const yasAzalt = ()=>{
+    degistirYas(yas - 1)
+  }
+  const [yazi,yaziDegistir] = useState("");
+
+  const yazidegistirfonk = (e)=>{
+    yaziDegistir(e.target.value);
+  }
+  const [showText, setShowText] = useState(true)
+  const [textColor, setTextColor]= useState("blue");
+
+
+  const [count,setCount] = useState(0);
+  const sayiyiArttir = ()=>{
+    setCount(count +1);
+  }
+  const sayiyiAzalt= ()=>{
+    setCount(count -1)
+  }
+  const sayiyiSifirYap = ()=>{
+    setCount(0)
   }
   return (
     <div className='App'>
-      {age}
-      <button onClick={increaseAge}>Increase Age</button>
+      <button onClick={sayiyiArttir}>Arttır</button>
+      <button onClick={sayiyiAzalt}>Azalt</button>
+      <button onClick={sayiyiSifirYap}>Sıfır Yap</button>
+      {count}
     </div>
   )
 }
