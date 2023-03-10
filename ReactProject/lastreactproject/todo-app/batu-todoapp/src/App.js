@@ -1,16 +1,25 @@
 import './App.css';
-import {useState} from "react";
-import Text from './Text';
+import Axios from "axios";
+import {useState,useEffect} from "react"
+
+
+
+
 
 
 function App() {
-  const [showText, setShowText] = useState(true);
+  const [catFact, setCatFact] =  useState("");
+
+  useEffect(()=>{
+    Axios.get("https://catfact.ninja/fact").then((res)=>{console.log(res.data.fact[1]);
+  });
+  }, []);
+
+
   return (
     <div className='App'>
-      <button onClick={()=>{setShowText(!showText)}}>
-        Show Text
-      </button>
-      {showText && <Text/>}
+      <button>Generate Cat Fact</button>
+      <p></p>
     </div>
   );
 }
