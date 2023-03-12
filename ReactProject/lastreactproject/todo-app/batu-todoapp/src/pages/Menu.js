@@ -1,5 +1,11 @@
-const Menu = ()=>{
-    return <h1>THIS IS THE MENU PAGE</h1>
+import { ChangeProfile } from "../components/ChangeProfile";
+
+const Menu = (props)=>{
+    return ( 
+    <div> 
+        Profil Sayfasına hoşgeldin {props.usernmae}
+        <ChangeProfile setUsername={props.setUsername}/>
+    </div>)
 }
 
 export default Menu;

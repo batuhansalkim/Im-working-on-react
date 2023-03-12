@@ -1,4 +1,4 @@
- const Home= ()=>{
-    return <h1>THIS IS TE HOME PAGE </h1>
+ const Home= (props)=>{
+    return <h1>Anasayfaya hoşgeldin {props.username} </h1>
 }
 export default Home;
