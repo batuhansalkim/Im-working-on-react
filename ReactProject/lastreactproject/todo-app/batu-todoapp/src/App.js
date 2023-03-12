@@ -9,7 +9,7 @@ import { useState,createContext } from 'react';
 export const AppContext = createContext();
 
 function App() {
-  const [username,setUsername] = useState("");
+  const [username,setUsername] = useState("batuan");
   return (
     <div className='App'>
       <AppContext.Provider value={{username, setUsername}}>

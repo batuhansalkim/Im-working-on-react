@@ -1,10 +1,12 @@
 import { ChangeProfile } from "../components/ChangeProfile";
-
-const Menu = (props)=>{
+import { useContext } from "react";
+import { AppContext } from "../App";
+const Menu = ()=>{
+    const {username,setUsername} = AppContext(useContext); 
     return ( 
     <div> 
-        Profil Sayfasına hoşgeldin {props.username}
-        <ChangeProfile setUsername={props.setUsername}/>
+        Profil Sayfasına hoşgeldin {username}
+        {/* <ChangeProfile setUsername={setUsername}/> */}
     </div>)
 }
 
