@@ -4,21 +4,27 @@ import Home from './pages/Home';
 import Menu from './pages/Menu';
 import Contact from './pages/Contact';
 import Navbar from './pages/Navbar';
-import { useState } from 'react';
+import { useState,createContext } from 'react';
+
+export const AppContext = createContext();
+
 function App() {
-  const [username,setusername] = useState("batuhan");
+  const [username,setUsername] = useState("");
   return (
     <div className='App'>
-      <Router>
-        <Navbar/>
-        <Routes>
-          <Route path='/' element={<Home username={username} />}/>
-          <Route path='/menu' element={<Menu username={username} setUsername={setusername}/>} />
-          <Route path='/contact' element={<Contact/>}/>
-          <Route path='*' element={<h1> PAGE NOT FOUND 404 ERROR sayfa bulunamadi</h1>}/>
-        </Routes>
-      </Router>
+      <AppContext.Provider value={{username, setUsername}}>
+        <Router>
+          <Navbar/>
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/menu' element={<Menu/>} />
+            <Route path='/contact' element={<Contact/>}/>
+            <Route path='*' element={<h1> PAGE NOT FOUND 404 ERROR sayfa bulunamadi</h1>}/>
+          </Routes>
+        </Router>
+      </AppContext.Provider>
     </div>
+    
   );
 }
 

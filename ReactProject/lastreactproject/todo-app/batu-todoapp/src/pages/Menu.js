@@ -3,7 +3,7 @@ import { ChangeProfile } from "../components/ChangeProfile";
 const Menu = (props)=>{
     return ( 
     <div> 
-        Profil Sayfasına hoşgeldin {props.usernmae}
+        Profil Sayfasına hoşgeldin {props.username}
         <ChangeProfile setUsername={props.setUsername}/>
     </div>)
 }
