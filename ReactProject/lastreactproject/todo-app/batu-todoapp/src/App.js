@@ -4,15 +4,13 @@ import Home from './pages/Home';
 import Menu from './pages/Menu';
 import Contact from './pages/Contact';
 import Navbar from './pages/Navbar';
-import { useState,createContext } from 'react';
-
-export const AppContext = createContext();
+import { QueryClient,QueryClientProvider } from '@tanstack/react-query';
 
 function App() {
-  const [username,setUsername] = useState("batuan");
+  const client = new QueryClient();
   return (
     <div className='App'>
-      <AppContext.Provider value={{username, setUsername}}>
+      <QueryClientProvider client={client}>
         <Router>
           <Navbar/>
           <Routes>
@@ -22,7 +20,7 @@ function App() {
             <Route path='*' element={<h1> PAGE NOT FOUND 404 ERROR sayfa bulunamadi</h1>}/>
           </Routes>
         </Router>
-      </AppContext.Provider>
+      </QueryClientProvider>
     </div>
     
   );

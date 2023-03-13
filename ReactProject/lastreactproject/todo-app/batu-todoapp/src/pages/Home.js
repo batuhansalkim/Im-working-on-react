@@ -1,8 +1,5 @@
-import { useContext } from "react";
-import { AppContext } from "../App";
-
+import { useQuery } from "@tanstack/react-query";
 const Home= ()=>{
-    const {username} = useContext(AppContext);
-    return <h1>Anasayfaya hoşgeldin {username} </h1>
+    return <h1>Anasayfaya hoşgeldin  </h1>
 }
 export default Home;
