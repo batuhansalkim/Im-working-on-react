@@ -6,6 +6,9 @@
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 10px;
 }
+p{
+  color: red;
+}
 form{
   display: flex;
   flex-direction: column;
