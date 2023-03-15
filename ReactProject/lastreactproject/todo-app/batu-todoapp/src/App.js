@@ -1,17 +1,16 @@
 
 import './App.css';
-import useToggle from './useToggle';
+import { BatuhanSalkim } from './useCount';
 
 
 function App() {
-  const [state, toggle] = useToggle();
+  const {count,arttır,azalt,reset} = BatuhanSalkim(0);
   return (
     <div className='App'>
-      <button onClick={toggle}>{state ? "Gizle" :"Göster"}
-      </button>
-      {state && <h1>Batuhan Salkım</h1>}
-
-      
+      {count}
+      <button onClick={arttır}>arttır</button>    
+      <button onClick={azalt}>azalat</button>    
+      <button onClick={reset}>sıfırla</button>    
     </div>
     
   );
