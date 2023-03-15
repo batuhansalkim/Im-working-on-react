@@ -8,6 +8,7 @@ function App() {
   return (
     <div className='App'>
       {count}
+      
       <button onClick={arttır}>arttır</button>    
       <button onClick={azalt}>azalat</button>    
       <button onClick={reset}>sıfırla</button>    
