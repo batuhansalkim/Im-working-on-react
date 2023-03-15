@@ -4,10 +4,9 @@ import { BatuhanSalkim } from './useCount';
 
 
 function App() {
-  const {count,arttır,azalt,reset} = BatuhanSalkim(0);
+  const {count,arttır,azalt,reset} = BatuhanSalkim();
   return (
     <div className='App'>
-      {count}
       
       <button onClick={arttır}>arttır</button>    
       <button onClick={azalt}>azalat</button>    
