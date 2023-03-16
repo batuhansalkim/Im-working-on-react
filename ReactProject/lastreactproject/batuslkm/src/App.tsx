@@ -1,18 +1,13 @@
-import React from 'react';
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import './App.css';
-import { Person,Country } from './Components/Person';
+import { Home } from "./pages/Home";
+import { Contact } from "./pages/Contact";
+import { Login } from "./pages/Login";
 
 function App() {
   return (
     <div className="App">
-      <Person
-      name="batuhan"
-      email="batuhan@gmail.com"
-      age={22}
-      isMarried = {false}
-      friends = {["tuna","necla","mustafa"]}
-      country={Country.France}
-      />
+      
     </div>
   );
 }
