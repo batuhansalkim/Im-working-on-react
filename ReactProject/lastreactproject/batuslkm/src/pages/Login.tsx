@@ -1,7 +1,10 @@
 export const Login =()=>{
     return(
-        <div>
-            <h1>Login Page</h1>
-        </div>
+        <h1>
+            THIS IS THE LOGIN PAGE 
+            <input/>
+            <button>Submit Login</button>
+            <button>Logout</button>
+        </h1>
     )
 }
