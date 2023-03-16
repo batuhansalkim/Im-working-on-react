@@ -4,6 +4,13 @@ interface AracKullanimi{
     age:number;
     isMarried:boolean;
     friends:string[];
+    country : Country;
+}
+export enum Country{
+    Turkey = "Turkey",
+    Brazil = "Brazil",
+    Canada="Canada",
+    France ="France",
 }
 
 export const Person =(props:AracKullanimi)=>{
@@ -16,6 +23,7 @@ export const Person =(props:AracKullanimi)=>{
             {props.friends.map((friend:string)=>(
                 <h1>{friend}</h1>
             ))}
+            <h1>Country : {props.country}</h1>
         </div>
     )
 }
